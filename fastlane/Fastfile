@@ -2,6 +2,16 @@ if !ENV["device"] or ENV["device"]==""
 	ENV["device"] = "iPhone 6"
 end
 
+lane :travis do
+
+scan(
+	project: "libs/SalesforceSDKCore/SalesforceSDKCore.xcodeproj",
+	clean: true,
+	scheme: "SalesforceSDKCore"
+)
+
+end
+
 lane :CI do
 	system("/usr/libexec/PlistBuddy -c \"add :ConnectHardwareKeyboard bool 0\" ~/Library/Preferences/com.apple.iphonesimulator.plist || /usr/libexec/PlistBuddy -c \"set :ConnectHardwareKeyboard 0\" ~/Library/Preferences/com.apple.iphonesimulator.plist")
 	system("rm -r $HOME/Library/Developer/Xcode/DerivedData/SalesforceMobileSDK-*")

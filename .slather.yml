@@ -1,0 +1,5 @@
+# .slather.yml
+
+coverage_service: coveralls
+xcodeproj: libs/SalesforceSDKCore/SalesforceSDKCore.xcodeproj
+scheme: SalesforceSDKCore
