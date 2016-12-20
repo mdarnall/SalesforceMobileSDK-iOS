@@ -38,6 +38,14 @@
                BlueprintName = "SalesforceSDKCoreTests"
                ReferencedContainer = "container:SalesforceSDKCore.xcodeproj">
             </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "SalesforceRestAPITests">
+               </Test>
+               <Test
+                  Identifier = "SalesforceSDKIdentityTests">
+               </Test>
+            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
