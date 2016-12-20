@@ -9,4 +9,4 @@ install:
 
 script: bundle exec fastlane travis
 
-after_script: slather
+after_script: bundle exec slather
